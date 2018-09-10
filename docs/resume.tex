@@ -1,0 +1,250 @@
+\documentclass[letterpaper]{article}
+
+
+
+\usepackage[hmargin=1cm, vmargin=1cm]{geometry}
+\usepackage{helvet}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage{scrextend}
+\changefontsizes[12pt]{10pt}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+
+
+\definecolor{cyan}{rgb}{0.0, 0.85, 0.85}
+\definecolor{magenta}{rgb}{0.85, 0.0, 0.85}
+\definecolor{yellow}{rgb}{0.95, 0.95, 0.0}
+\definecolor{offwhite}{rgb}{0.98, 0.97, 0.94}
+
+
+
+\renewcommand{\labelitemi}{\scriptsize \color{yellow} $\triangleright$}
+
+\newcommand{\sectiontitle}[1]{
+	{\color{magenta} \vline height 1em depth 1pt width 1.5pt}%
+	{\large \colorbox{offwhite}{\color{black} \textsc{#1}}}
+	\vspace*{0.5em}
+}
+
+\newcommand{\sectionseparator}[1]{
+	\hline
+	\vspace*{1em}
+}
+
+\newcommand{\experiencepanel}[4]{
+	\textbf{{#1}}
+	\begin{footnotesize}
+		\textbf{{#2}}
+	\end{footnotesize}
+	\\
+	\begin{scriptsize}
+		{#3} $\langle${#4}$\rangle$
+	\end{scriptsize}
+}
+
+\newcommand{\projectpanel}[3]{
+	\textbf{{#1}}
+	\begin{footnotesize}
+		{#2}
+	\end{footnotesize}
+	\begin{scriptsize}
+		{#3}
+	\end{scriptsize}
+}
+
+\newenvironment{statementlist}{
+		\begin{small}
+		\begin{itemize}
+		\setlength\itemsep{0em}
+}{
+		\end{itemize}
+		\end{small}
+		\vspace*{1em}
+}
+
+
+
+\begin{document}
+
+	% Remove page number, expected 1 page
+	\pagenumbering{gobble}
+
+	%
+	%	HEADER
+	%
+	\begin{minipage}[t]{0.65\textwidth}
+		\begin{Huge}
+			\colorbox{offwhite}{\color{cyan} \textbf{Kelvin Lu}}}
+		\end{Huge}
+		\\
+		\begin{footnotesize}
+			\textit{python loving bicycle riding adventure time watching coffee fuelled comp. sci. student}
+		\end{footnotesize}
+	\end{minipage}
+	%
+	\begin{minipage}[t]{0.3\textwidth}
+		\begin{flushright}
+			kelvinlu.github.io \\
+			kelvinlu@ucdavis.edu
+		\end{flushright}
+	\end{minipage}
+
+	\vspace{0.5em}
+	\hline
+	\vspace{0.5em}
+
+	%
+	%	CONTENT
+	%
+	\begin{minipage}[t]{0.55\textwidth}
+
+		% Section
+		\sectiontitle{Experience}
+
+		% Items
+		\experiencepanel{Enovix Corp.}{Summer Intern}{Fremont, CA}{Summer 2013}
+		\begin{statementlist}
+			\item Developed scripts to aid the test/data team in battery R\&D.
+			\item Assisted three engineers with their daily tasks.
+		\end{statementlist}
+
+		\experiencepanel{Enovix Corp.}{Test Lab Intern}{Fremont, CA}{Summer 2014}
+		\begin{statementlist}
+			\item Worked under the Director of Integration on data flow and reporting.
+			\item Created an SMS alert system for tasks and checks.
+			\item Made GUIs for displaying battery tester machine status.
+			\item Efforts streamlined parts and data through the company pipeline.
+		\end{statementlist}
+
+		\sectionseparator
+
+		% Section
+		\sectiontitle{Organizations}
+
+		% Items
+		\experiencepanel{Davis CS Club}{Vice Chair, Web Dev. Committee}{Davis, CA}{2014-2015}
+		\begin{statementlist}
+			\item Leading web development workshops for beginning students.
+		\end{statementlist}
+
+		\experiencepanel{Davis CS Club}{Tutor}{Davis, CA}{Spring 2014, Fall 2014}
+		\begin{statementlist}
+			\item Tutored students in lower division computer science courses.
+			\item Reinforced object oriented, data structure and algorithm concepts.
+			\item Increased students' understanding of core computer science ideas.
+		\end{statementlist}
+
+		\sectionseparator
+
+		% Section
+		\sectiontitle{Projects}
+
+		% Items
+		\projectpanel{ping@me}{github.com/KelvinLu/ping-at-me}{Oct 2014}
+		\begin{statementlist}
+			\item Personal project to learn AngularJS and Firebase.
+			\item Communicates HTML5 geolocation to friends in Yo app fashion.
+		\end{statementlist}
+
+		\projectpanel{Marklog}{github.com/KelvinLu/marklog}{Sept 2014}
+		\begin{statementlist}
+			\item Flask web application serves Markdown files for static personal blogs.
+		\end{statementlist}
+
+		\projectpanel{Huffman Codes File Compression}{(coursework)}{Spring 2013}
+		\begin{statementlist}
+			\item Implemented lossless file compression with Huffman Encoding.
+			\item Use of various tree data structures for performance optimization.
+		\end{statementlist}
+
+		\projectpanel{Airport Flight Routing}{(coursework)}{Spring 2013}
+		\begin{statementlist}
+			\item Computed the best cost itineraries for thousands of simulated airports and flights by Dijkstra's algorithm.
+			\item Successfully performed under a challenge time limit.
+			\item Utilized optimization and code profiling with valgrind, gprof.
+		\end{statementlist}
+
+	\end{minipage}
+	%
+	\hspace{0.05\textwidth}
+	%
+	\begin{minipage}[t]{0.35\textwidth}
+
+		% Section
+		\sectiontitle{Education}
+
+		% Items
+		\textbf{University of California, Davis}
+		\\
+		\begin{small}
+			B.S. Computer Science and Engineering
+		\end{small}
+		\\
+		\vspace*{1em}
+		\\
+		\begin{tabular}{l l}
+			{\textbf Cumulative GPA} & {3.80} \\
+			{\textbf Expected Graduation} & {June 2016} \\
+		\end{tabular}
+		\\
+		\vspace*{1em}
+
+		\sectionseparator
+
+		% Section
+		\sectiontitle{Technical Skills}
+
+		% Items
+		\begin{tabular}{l l}
+			\textbf{Languages} 		\\
+			\textit{proficiency} 	& \textit{familiarity} \\
+			Python 					& R \\
+			JavaScript 				& Lisp \\
+			C++ 					& Prolog \\
+			Java 					& \\
+			C 						& \\
+			HTML 					& \\
+			CSS						& \\
+			{}						& \\
+			\textbf{Frameworks, Libraries} 	\\
+			Django, Flask, \\
+			Pandas, NumPy, SciPy, \\
+			AngularJS, jQuery, \\
+			Foundation
+		\end{tabular}
+		\\
+		\vspace*{1em}
+		\\
+		\begin{tabular}{l}
+			\textbf{Concepts} \\
+			object oriented programming, \\
+			data structures, graph algorithms, \\
+			sorting algorithms, statistics, \\
+			MVC, REST, AJAX \\
+		\end{tabular}
+		\vspace*{1em}
+
+		\sectionseparator
+
+		% Section
+		\sectiontitle{Honors}
+
+		% Items
+		\begin{small}
+		{Dean's List, College of Engineering} \\
+		\hspace*{2em} $\times$ {6 Quarters} \\
+		{Edward Kraft Prize Recipient} \\
+		\end{small}
+
+		% End
+		\vspace*{4em}
+
+		\begin{center}
+			\begin{scriptsize}
+				\colorbox{black}{\color{white} \textit{(38.537002, -121.754725)}}
+			\end{scriptsize}
+		\end{center}
+
+	\end{minipage}
+
+\end{document}
